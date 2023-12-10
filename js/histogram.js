@@ -15,6 +15,9 @@ class Histogram {
     initHistogram() {
         let viz = this;
 
+        // Filter data based on the brand
+        let brandFilteredData = viz.data.filter(c => c.brand2 === viz.brand);
+
         const svg = d3.select(`#${this.containerId}`)
             .append("svg")
             .attr("width", this.width + this.margin.left + this.margin.right)
@@ -39,7 +42,7 @@ class Histogram {
             .padding(0.1);
 
         // Set the domain of xScale based on unique sentiments
-        viz.xScale.domain(viz.data.map(d => d.adjective_1_sentiment));
+        viz.xScale.domain(brandFilteredData.map(d => d.adjective_1_sentiment));
 
         viz.yScale = d3.scaleLinear()
             .range([this.height, 0]);
@@ -56,21 +59,22 @@ class Histogram {
             .attr("dx", -8) // Adjust this value to move the labels left or right
             .attr("dy", 8); // Adjust this value to move the labels down or up
 
-
-
         viz.yAxisGroup = svg.append("g")
             .attr("class", "y axis");
 
-        this.wrangleData();
+        viz.wrangleData();
     }
 
 
     wrangleData() {
         let viz = this;
 
-        // Filter data based on the selected range
-        let filteredData = viz.data;
+        // Filter data based on brand
+        let filteredData = viz.data.filter(c =>
+            c.brand2 === viz.brand
+        );
 
+        // If selectedRange is not empty, further filter by sentiment range
         if (selectedRange.length !== 0) {
             filteredData = filteredData.filter(c =>
                 selectedRange[0] <= c.adjective_1_sentiment && c.adjective_1_sentiment <= selectedRange[1]
@@ -90,6 +94,7 @@ class Histogram {
 
         this.drawHistogram();
     }
+
     drawHistogram() {
         let viz = this;
 
