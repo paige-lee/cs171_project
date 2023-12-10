@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>nike adidas project</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<!-- WRAPPER -->
+<div class="container-fluid" style="height: 100vh; padding-top: 1vh">
+    <div class="row">
+        <div class="col-10 offset-1" style="border: transparent; border-radius: 5px;">
+
+            <div class="parallax-section" id="section9">
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <div class="row d-flex justify-content-center" style="height: 10vh; padding: 0; background: transparent;">
+                        <div class="align-self-center">
+                            <h1 class="text-center">Nike vs. Adidas</h1>
+                            <h5 class="text-center">Paige Lee, Sophie Thorpe, Josha Thomas</h5>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-6" style="background: transparent; margin-top: 25px; overflow: hidden;">
+                            <div class="row">
+                                <br>
+                                <img src="nike.jpeg" height="450" style="opacity: 0.8; margin-top: 40px;">
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-6" style="background: transparent; margin-top: 25px; overflow: hidden;">
+                            <div class="row">
+                                <img src="adidas.jpeg" height="450" style="opacity: 0.8; margin-top: 40px;">
+                            </div>
+                        </div>
+
+                        <br>
+                        <p class="mt-4">Explore Nike and Adidas products through interactive visuals, diving into details like prices, ratings, and sentiments, all while uncovering the nuances between Adidas and Nike product descriptions.</p>
+
+                        <!-- Add a button for the user to interact with -->
+                        <button id="playButton" class="btn btn-primary mx-auto mt-4">Click here to listen to music while you look at our website!</button>
+                        <!-- Add an audio element with the song -->
+                        <audio id="backgroundAudio">
+                            <source src="Knaan-Wavin-Flag-(TrendyBeazt.com).mp3" type="audio/mp3">
+                        </audio>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 1: LOGO VISUALIZATIONS -->
+            <div class="parallax-section" id="section1" style="background-image: url('logo_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <p>Explore the world of Nike and Adidas products through an interactive visualization: explore product names, prices, and average ratings by hovering over data points on the logos.</p>
+                    <p>You can shuffle the data displayed in each point at your whim with the 'shuffle data' button.</p>
+                    <button id="shuffleButton">Shuffle Data</button>
+                    </br>
+                    <div class="row" style="height: 200vh; background: transparent; padding: 0;">
+
+                        <!-- LEFT -->
+                        <div class="col-6" style="background: transparent;">
+
+                            <div class="row">
+                                <!-- NIKE -->
+                                <div class="col">
+                                    <div class="row" style="height: 60vh; background: transparent; padding: 1vh">
+                                        <div id="nikeDiv" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row">
+                                <!-- ADIDAS -->
+                                <div class="col">
+                                    <div class="row" style="height: 60vh; background: transparent; padding: 1vh;">
+                                        <div id="adidasDiv" style="height: 100%; width:100%; border: transparent; border-radius: 5px; background: transparent;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SECTION 2: Bar Chart -->
+            <div class="parallax-section" id="section2" style="background-image: url('barchart_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.6);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <p>Discover the sentiment analysis of product descriptions for Nike and Adidas products in the following graph.</p>
+                    <p>This bar chart displays the average sentiment polarity scores of each brand's product descriptions.</p>
+                    <p>Sentiment polarity scores range from -1 (most negative) to 1 (most positive), where exactly 0 is neutral.</p>
+                    <p>This visualization provides an overview of the overall sentiment associated with each brand's products.</p>
+                    <div class="row" style="height: 200vh; background: transparent; padding: 0; margin-top: 25px;">
+                        <div class="col-12" style="background: transparent; height: 200vh;">
+                            <div class="row justify-content-center" style="height: 200vh;">
+                                <div class="col-md-8">
+                                    <!-- Bar Chart -->
+                                    <div style="height: 200vh; background: transparent; padding: 1vh; width: 100%;">
+                                        <div id="barchartDiv" style="height: 100%; border: white; border-radius: 5px; background: transparent;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SECTION 3: BUBBLE CHARTS -->
+            <div class="parallax-section" id="section3" style="background-image: url('bubblechart_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <p>Explore the first detected adjectives for each brand's product descriptions and how they relate to average rating and average listing price.</p>
+                    <p>With a bubble for each adjective, each bubble is sized according to average listing price and colored according to average rating.</p>
+                    <div class="row">
+                        <!-- LEFT -->
+
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row" style="height: 100vh; background: transparent; padding: 1vh">
+                                <!-- NIKE -->
+                                <div class="col">
+                                    <br>
+                                    <br>
+                                    <p class="text-center"><strong>Nike</strong></p>
+                                    <div id="bubbleDivNike" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row" style="height: 100vh; background: transparent; padding: 1vh;">
+                                <!-- ADIDAS -->
+                                <div class="col">
+                                    <br>
+                                    <br>
+                                    <p class="text-center"><strong>Adidas</strong></p>
+                                    <div id="bubbleDivAdidas" style="height: 100%; width:100%; border: transparent; border-radius: 5px; background: transparent;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SECTION 4: TREEMAPS -->
+            <div class="parallax-section" id="section4" style="background-image: url('treemap_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <p>Explore the treemaps below, where each rectangle represents a sentiment polarity score (grouped to the 2nd decimal), the size of each rectangle corresponds to the average listing price, and the rectangles are colored by rating.</p>
+                    <p>Through this visualization, users can swiftly grasp sentiment relationships and gain insights into price distribution, ratings across categories, and sentiment variations, for each brand.</p>
+                    </br>
+                    <div class="row">
+                        <!-- LEFT -->
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row" style="height: 80vh; background: transparent; padding: 1vh">
+                                <!-- NIKE -->
+                                <div class="col">
+                                    <br>
+                                    <br>
+                                    <p class="text-center"><strong>Nike</strong></p>
+                                    <div id="treemapDivNike" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row" style="height: 80vh; background: transparent; padding: 1vh;">
+                                <!-- ADIDAS -->
+                                <div class="col">
+                                    <br>
+                                    <br>
+                                    <p class="text-center"><strong>Adidas</strong></p>
+                                    <div id="treemapDivAdidas" style="height: 100%; width:100%; border: transparent; border-radius: 5px; background: transparent;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- SECTION 5: TABLE -->
+            <div class="parallax-section" id="section5" style="background-image: url('table_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <p>Filter the table below by adjective to see all products with that adjective as its 1st detected adjective, along with the corresponding sentiment polarity score, brand, rating, and listing price.</p>
+                    <p>Hover over each row to more easily/quickly see the brand that each product belongs to (green = Adidas, purple = Nike).</p>
+                    <p>Make sure to scroll back up to access the adjective filter dropdown menu again!</p>
+                        <div class="row" style="height: 200vh; background: transparent; padding: 1vh">
+                            <div id="table-container" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: BRUSH AND HISTOGRAMS-->
+            <div class="parallax-section" id="section6" style="background-image: url('histogram_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.75);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <div class="row" style="height: 20vh; background: transparent; padding: 0;">
+                        <p>Slide your cursor along the scale below to select your desired range of sentiment polarity scores. Watch as the histograms below dynamically filter to display data within your chosen polarity range.</p>
+                        <div id="brushable-scale-container" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <p>The histograms below depict the frequency of first adjectives used within the selected polarity range across Adidas and Nike product descriptions. Explore the comparative usage of these adjectives to discern brand-specific language nuances.</p>
+
+                    <div class="row">
+
+                        <!-- LEFT -->
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row" style="height: 70vh; background: transparent; padding: 1vh">
+                                <!-- NIKE -->
+                                <div class="col">
+                                    <div id="nikeHistogram" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="col-6" style="background: transparent;">
+                            <div class="row" style="height: 70vh; background: transparent; padding: 1vh;">
+                                <!-- ADIDAS -->
+                                <div class="col">
+                                    <div id="adidasHistogram" style="height: 100%; width:100%; border: transparent; border-radius: 5px; background: transparent;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SECTION 8: LINE CHARTS -->
+            <div class="parallax-section" id="section8" style="background-image: url('linechart_background.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7);"></div>
+                <div class="container-fluid" style="height: 200vh; padding-top: 1vh; position: relative; z-index: 1;">
+                    <p>In the line charts below, explore the relationships between sentiment polarity scores and average rating and average listing price</p>
+                    <div class="row">
+                        <!-- LEFT -->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row" style="height: 80vh; background: transparent; padding: 1vh">
+                                        <p>Both brands encountered a decrease in average ratings as sentiment approached neutrality.</p>
+                                        <div id="rating-line-chart" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row" style="height: 80vh; background: transparent; padding: 1vh">
+                                        <p>The adjectives conveying negative sentiment corresponded to the highest average prices found among the products.</p>
+                                        <div id="price-line-chart" style="height: 100%; width:100%; padding: 20px; border: transparent; border-radius: 5px; background: transparent;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+
+
+
+<!-- - - - - - - - - - - - >
+<    Load JS libraries     >
+<- - - - - - - - - - - - -->
+
+    <!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v2.min.js"></script>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+<!-- OWN JS -->
+<script src="js/logoVis.js"></script>
+<script src="js/sentVis.js"></script>
+<script src="js/heatmapVis.js"></script>
+<script src="js/bubbleVis.js"></script>
+<script src="js/treemapVis.js"></script>
+<script src="js/table.js"></script>
+<script src="js/brush.js"></script>
+<script src="js/histogram.js"></script>
+<script src="js/lineChartVis.js"></script>
+<script src="js/barchartVis.js"></script>
+<script src="js/main.js"></script>
+
+
+</div>
+</body>
+</html>
