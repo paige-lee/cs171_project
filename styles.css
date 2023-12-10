@@ -1,0 +1,103 @@
+.tooltip {
+    position: absolute;
+    text-align: center;
+    font: 16px sans-serif;
+    /*  pointer-events: none;	This line needs to be removed */
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+}
+
+.table {
+    font-size: 0.7em;
+}
+
+.x-axis, .y-axis {
+    font-size: .5em;
+}
+
+#selector {
+    padding-top: 16px;
+}
+
+/* Add this to your CSS file */
+.tooltip-box {
+    border: 1px solid darkgray; /* Adjust the border style */
+    padding: 5px; /* Adjust the padding */
+    background-color: azure;
+}
+
+#shuffleButton {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: azure;
+    border-radius: 20px; /* Adjust the value based on how rounded you want the button */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+#shuffleButton:hover {
+    background-color: LightSkyBlue; /* Change color on hover */
+}
+
+
+.parallax-section {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    will-change: transform;
+    transition: transform 0.5s ease-out;
+}
+
+body {
+    font-family: 'Arial', serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    font-size: 20px;
+}
+
+.tableFixHead {
+    overflow: auto;
+    max-height: 70vh;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: azure; /* Set the background color as per your design */
+}
+
+/* Rest of your common table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px 16px;
+}
+
+th {
+    background: #eee;
+}
+
+.brush .selection {
+    fill: deepskyblue;
+    fill-opacity: 0.3; /* Adjust the opacity as needed */
+}
+
+
+
